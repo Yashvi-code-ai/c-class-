@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    int result;
+
+    printf("Initial value of x: %d\n", x);
+
+    // Post-increment
+    result = x++;
+    printf("\nAfter post-increment (result = x++):\n");
+    printf("Value of result: %d\n", result);  
+    printf("Value of x: %d\n", x);            
+
+    // Reset x
+    x = 5;
+
+    // Pre-increment
+    result = ++x;
+    printf("\nAfter pre-increment (result = ++x):\n");
+    printf("Value of result: %d\n", result); 
+    printf("Value of x: %d\n", x);           
+
+    return 0;
+
+
