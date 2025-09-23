@@ -1,19 +1,25 @@
-#include<stdio.h>
-int main(){
-int marks;
- printf("Enter your marks (0 - 100): ");
- scanf("%d",&marks);
+#include <stdio.h>
 
-if (marks >=90 && marks <=100) {
-printf(" grade is A\n "); }
- else if ( marks >=75 && marks <=89) {
-     printf(" grade is B\n "); }
- else if ( marks >=50 && marks <=74) {
-     printf(" grade is C\n"); }
-else if ( marks>=0 && marks <50){
-     printf(" grade is F\n"); }
+int main() {
+    int marks;
 
-return 0;
+    printf("Enter your marks (0 - 100): ");
+    scanf("%d", &marks);
+
+    if (marks >= 90 && marks <= 100) {
+        printf("Grade is A\n");
+    } else if (marks >= 75 && marks <= 89) {
+        printf("Grade is B\n");
+    } else if (marks >= 50 && marks <= 74) {
+        printf("Grade is C\n");
+    } else if (marks >= 0 && marks < 50) {
+        printf("Grade is F\n");
+    } else {
+        printf("Invalid input. Please enter marks between 0 and 100.\n");
+    }
+
+    return 0;
 }
+
 
 
