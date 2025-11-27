@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char filename[100];
+    char line[500];
+    FILE *fp;
+
+ 
+    printf("Enter the filename: ");
+    scanf("%99s", filename);
+
+
+    fp = fopen(filename, "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    getchar();
+
+    printf("Enter text (type END on a new line to stop):\n");
+
+    while (1) {
+        fgets(line, sizeof(line), stdin);
+
+        
+        if (strncmp(line, "END", 3) == 0 && (line[3] == '\n' || line[3] == '\0')) {
+            break;
+        }
+
+     
+        fputs(line, fp);
+    }
+
+    fclose(fp);
+    printf("Text written to %s successfully.\n", filename);
+
+    return 0;
+}
